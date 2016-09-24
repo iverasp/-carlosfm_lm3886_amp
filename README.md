@@ -9,7 +9,7 @@ This PCB is for an LM3886 amplifier, based on schematics by Carlos.
 3.3nF caps: 7.5mm spacing, 10x3mm L x W  
 3.3uF caps: 22.5mm spacing, 26.5x11mm L x W  
 330pF cap: 5mm spacing, 7.5x4mm L x W  
-~~2.2uF caps: 22.5mm spacing, 26.5x8.5mm L x W~~  
+~~2.2uF cap: 22.5mm spacing, 26.5x8.5mm L x W~~  
 
 1W resistors: L=10mm (raised above PCB to provide cooling)  
 other resistors: L=10mm
