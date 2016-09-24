@@ -17,5 +17,5 @@ other resistors: L=10mm
 ### Remaining parts
 
 The Zobel network is placed on the speaker terminals  
-Feedback resistor is placed on chip terminals (3, 9)
+Feedback resistor is placed on chip terminals (3, 9)  
 The 2.2uF input cap is too big to fit on the board. Place it somewhere convenient instead.
