@@ -1,6 +1,7 @@
 ## LM3886 amplifier
 
-This PCB is for an LM3886 amplifier, based on schematics by Carlos.
+This PCB is for an LM3886 amplifier, based on schematics by Carlos.  
+Pin 11 is removed to allow routing.
 
 ### Dimensions of parts
 
@@ -18,4 +19,5 @@ other resistors: L=10mm
 
 The Zobel network is placed on the speaker terminals  
 Feedback resistor is placed on chip terminals (3, 9)  
-The 2.2uF input cap is too big to fit on the board. Place it somewhere convenient instead.
+The 2.2uF input cap is too big to fit on the board. Place it somewhere convenient instead.  
+Resistor RM is placed on chip terminals (8, 4)  

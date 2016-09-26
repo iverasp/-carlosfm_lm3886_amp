@@ -81,7 +81,6 @@
 <pad name="10" x="7.112" y="2.54" drill="1.016" diameter="1.778" shape="long" rot="R90"/>
 <pad name="9" x="5.334" y="-2.54" drill="1.016" diameter="1.778" shape="long" rot="R90"/>
 <pad name="1" x="-8.89" y="-2.54" drill="1.016" diameter="1.778" shape="long" rot="R90"/>
-<pad name="11" x="8.89" y="-2.54" drill="1.016" diameter="1.778" shape="long" rot="R90"/>
 </package>
 <package name="TO220-11M">
 <wire x1="-10.16" y1="2.54" x2="-10.16" y2="6.858" width="0.127" layer="21"/>
@@ -15977,10 +15976,8 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="C8" library="rcl" deviceset="C-EU" device="050-045X075" value="330pF"/>
 <part name="R4" library="rcl" deviceset="R-EU_" device="0207/10" value="100R"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
-<part name="OUTPUT" library="pinhead" deviceset="PINHD-1X2" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
-<part name="RM" library="rcl" deviceset="R-EU_" device="0207/10" value="10k"/>
 <part name="C9" library="rcl" deviceset="C-EU" device="225-087X268" value="3.3uF"/>
 <part name="P+2" library="supply1" deviceset="V+" device=""/>
 <part name="P-2" library="supply1" deviceset="V-" device=""/>
@@ -15990,6 +15987,14 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="V-" library="wirepad" deviceset="2,54/1,0" device=""/>
 <part name="PGND" library="wirepad" deviceset="2,54/1,0" device=""/>
 <part name="V+" library="wirepad" deviceset="2,54/1,0" device=""/>
+<part name="OUT+" library="wirepad" deviceset="2,54/1,0" device=""/>
+<part name="OUT-" library="wirepad" deviceset="2,54/1,0" device=""/>
+<part name="A1" library="wirepad" deviceset="2,54/1,0" device=""/>
+<part name="A2" library="wirepad" deviceset="2,54/1,0" device=""/>
+<part name="GND10" library="supply1" deviceset="GND" device=""/>
+<part name="GND11" library="supply1" deviceset="GND" device=""/>
+<part name="CHASSIS" library="wirepad" deviceset="2,54/1,0" device=""/>
+<part name="GND12" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -16015,10 +16020,8 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <instance part="C8" gate="G$1" x="43.18" y="53.34"/>
 <instance part="R4" gate="G$1" x="43.18" y="40.64" rot="R90"/>
 <instance part="GND6" gate="1" x="43.18" y="30.48"/>
-<instance part="OUTPUT" gate="G$1" x="124.46" y="50.8"/>
 <instance part="GND7" gate="1" x="5.08" y="55.88" rot="R90"/>
-<instance part="GND8" gate="1" x="114.3" y="50.8" rot="R270"/>
-<instance part="RM" gate="G$1" x="91.44" y="53.34" rot="R90"/>
+<instance part="GND8" gate="1" x="114.3" y="45.72" rot="R270"/>
 <instance part="C9" gate="G$1" x="101.6" y="53.34"/>
 <instance part="P+2" gate="1" x="137.16" y="99.06" rot="R90"/>
 <instance part="P-2" gate="1" x="137.16" y="83.82" rot="R270"/>
@@ -16028,6 +16031,14 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <instance part="V-" gate="P" x="147.32" y="83.82" rot="R180"/>
 <instance part="PGND" gate="P" x="147.32" y="91.44" rot="R180"/>
 <instance part="V+" gate="P" x="147.32" y="99.06" rot="R180"/>
+<instance part="OUT+" gate="P" x="124.46" y="53.34" rot="R180"/>
+<instance part="OUT-" gate="P" x="124.46" y="45.72" rot="R180"/>
+<instance part="A1" gate="P" x="10.16" y="101.6"/>
+<instance part="A2" gate="P" x="10.16" y="93.98"/>
+<instance part="GND10" gate="1" x="17.78" y="101.6" rot="R90"/>
+<instance part="GND11" gate="1" x="17.78" y="93.98" rot="R90"/>
+<instance part="CHASSIS" gate="P" x="10.16" y="109.22"/>
+<instance part="GND12" gate="1" x="17.78" y="109.22" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -16075,14 +16086,29 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="-2.54" y1="55.88" x2="2.54" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="GND8" gate="1" pin="GND"/>
-<pinref part="OUTPUT" gate="G$1" pin="2"/>
-<wire x1="116.84" y1="50.8" x2="121.92" y2="50.8" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="GND9" gate="1" pin="GND"/>
 <pinref part="PGND" gate="P" pin="P"/>
 <wire x1="139.7" y1="91.44" x2="144.78" y2="91.44" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND8" gate="1" pin="GND"/>
+<pinref part="OUT-" gate="P" pin="P"/>
+<wire x1="116.84" y1="45.72" x2="121.92" y2="45.72" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="A1" gate="P" pin="P"/>
+<pinref part="GND10" gate="1" pin="GND"/>
+<wire x1="12.7" y1="101.6" x2="15.24" y2="101.6" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="A2" gate="P" pin="P"/>
+<pinref part="GND11" gate="1" pin="GND"/>
+<wire x1="12.7" y1="93.98" x2="15.24" y2="93.98" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="CHASSIS" gate="P" pin="P"/>
+<pinref part="GND12" gate="1" pin="GND"/>
+<wire x1="12.7" y1="109.22" x2="15.24" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -16104,15 +16130,11 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="93.98" y1="17.78" x2="106.68" y2="17.78" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="40.64" x2="66.04" y2="33.02" width="0.1524" layer="91"/>
 <junction x="66.04" y="17.78"/>
-<pinref part="RM" gate="G$1" pin="1"/>
 <wire x1="66.04" y1="33.02" x2="66.04" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="91.44" y1="48.26" x2="91.44" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="91.44" y1="33.02" x2="66.04" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="33.02" x2="66.04" y2="33.02" width="0.1524" layer="91"/>
 <junction x="66.04" y="33.02"/>
 <pinref part="C9" gate="G$1" pin="2"/>
 <wire x1="101.6" y1="48.26" x2="101.6" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="101.6" y1="33.02" x2="91.44" y2="33.02" width="0.1524" layer="91"/>
-<junction x="91.44" y="33.02"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 <junction x="93.98" y="17.78"/>
 </segment>
@@ -16191,16 +16213,8 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <net name="N$7" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="3"/>
-<pinref part="OUTPUT" gate="G$1" pin="1"/>
 <wire x1="86.36" y1="53.34" x2="121.92" y2="53.34" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="8"/>
-<pinref part="RM" gate="G$1" pin="2"/>
-<wire x1="76.2" y1="60.96" x2="91.44" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="91.44" y1="60.96" x2="91.44" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="OUT+" gate="P" pin="P"/>
 </segment>
 </net>
 </nets>
